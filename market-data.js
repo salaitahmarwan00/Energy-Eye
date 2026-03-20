@@ -1,0 +1,119 @@
+window.MOCK_MARKET_DATA = {
+  "lastUpdated": "2026-03-19",
+  "overallSummary": {
+    "title": "Global Energy Insurance Market Brief",
+    "content": "The global energy insurance sector is navigating a transitional phase. Insurers are increasingly pivoting capacity towards renewables while maintaining strict underwriting discipline in carbon-intensive operations. The upstream market remains highly competitive due to favorable loss records, while downstream sectors face localized challenges driven by aging infrastructure and ESG pressures. Overall market capacity remains robust, ensuring competitive dynamics for well-managed risks.",
+    "premiumTrend": "stable",
+    "capacityTrend": "expanding"
+  },
+  "branches": {
+    "downstream-oil-gas": {
+      "title": "Downstream: Oil & Gas",
+      "summary": "Refining margins remain historically steady, but aging infrastructure continues to drive intense scrutiny from underwriters. Recent unseasonal incidents in the global refining hubs have led to increased deductibles for high-risk assets and business interruption coverage.",
+      "premiumImpact": "Firming - 5% to 8% increase on average for non-clean or loss-affected accounts.",
+      "capacityImpact": "Stable - Existing prominent syndicates and carriers are maintaining their deployed lines, though cautious on expansion.",
+      "premiumTrend": "hardening",
+      "capacityTrend": "stable",
+      "news": [
+        { "headline": "Refinery Outages Spark Underwriting Review for Aging Assets", "source": "Energy Risk Daily", "date": "2026-03-18" },
+        { "headline": "Major Carriers Announce Stricter ESG Guidelines for New O&G Projects", "source": "Insurance Insider", "date": "2026-03-17" },
+        { "headline": "Downstream Energy Syndicates Report Profitable Q1", "source": "Lloyd's Market News", "date": "2026-03-16" }
+      ]
+    },
+    "downstream-power": {
+      "title": "Downstream: Conventional Power",
+      "summary": "With a global push towards cleaner energy, conventional power generation assets (coal, older gas turbines) are facing significantly reduced appetite from ESG-focused syndicates, leading to localized capacity constraints and forced self-insurance in some territories.",
+      "premiumImpact": "Upward pressure on rates (+5-12%), driven by reduced market competition.",
+      "capacityImpact": "Contracting rapidly as top-tier global carriers exit the thermal coal and un-abated gas space.",
+      "premiumTrend": "hardening",
+      "capacityTrend": "contracting",
+      "news": [
+        { "headline": "Leading Reinsurers Cut Ties with Un-abated Thermal Coal Facilities", "source": "Green Energy Finance", "date": "2026-03-19" },
+        { "headline": "Conventional Power Operators Face Soaring BI Deductibles", "source": "Power Magazine", "date": "2026-03-15" }
+      ]
+    },
+    "downstream-renewables": {
+      "title": "Downstream: Renewable Energy",
+      "summary": "Surging capacity is defining this sector as new MGAs and traditional carriers aggressively target the space to balance ESG portfolios. However, secondary peril losses (hail, convective storms) on massive solar installations are causing structural changes to policy terms.",
+      "premiumImpact": "Varied: Softening heavily for offshore wind, but Hardening for solar PV in CAT-exposed zones like Texas and Australia.",
+      "capacityImpact": "Rapidly Expanding - Abundant fresh capital entering the market globally.",
+      "premiumTrend": "stable",
+      "capacityTrend": "expanding",
+      "news": [
+        { "headline": "Hail Damage on US Solar Farms Prompts Sub-limit Impositions", "source": "Renewables Risk Report", "date": "2026-03-18" },
+        { "headline": "Record Capacity Deployed in North Sea Offshore Wind Projects", "source": "Energy Insurance Weekly", "date": "2026-03-14" },
+        { "headline": "New MGA Launches Dedicated to Battery Energy Storage Systems (BESS)", "source": "Insurance Insider", "date": "2026-03-12" }
+      ]
+    },
+    "upstream-offshore": {
+      "title": "Upstream: Offshore & Extraction",
+      "summary": "Offshore exploration and production has seen a notable resurgence supported by stabilized oil prices. Highly favorable loss records over the past 36 months have kept the upstream insurance market extremely competitive, overriding broader macroeconomic inflation concerns.",
+      "premiumImpact": "Softening - High single-digit to low double-digit rate reductions available for clean accounts.",
+      "capacityImpact": "Abundant - Overcapacity driving fierce competition among London and international markets to secure prime risks.",
+      "premiumTrend": "softening",
+      "capacityTrend": "expanding",
+      "news": [
+        { "headline": "Upstream Energy Extends Profitable Run to Fourth Consecutive Year", "source": "Lloyd's Market News", "date": "2026-03-19" },
+        { "headline": "Fierce Competition Plunges Rates for Gulf of Mexico Extraction Operations", "source": "Offshore Engineer", "date": "2026-03-16" },
+        { "headline": "Deepwater Rig Values Rebound, Driving Slight Premium Volume Increases", "source": "Energy Risk Daily", "date": "2026-03-10" }
+      ]
+    }
+  },
+  "losses": [
+    {
+      "id": "L-101",
+      "facility": "North Sea Alpha Platform",
+      "type": "Offshore Platform Fire",
+      "sector": "Upstream: Offshore",
+      "estimatedLoss": "$450m",
+      "date": "2026-03-20T02:00:00",
+      "status": "Under Investigation",
+      "impact": "Capacity restricted for older North Sea assets.",
+      "description": "A major fire broke out in the processing module, leading to a full evacuation and production halt."
+    },
+    {
+      "id": "L-102",
+      "facility": "Texas Gulf Refinery",
+      "type": "Power Grid Failure / BI",
+      "sector": "Downstream: Oil & Gas",
+      "estimatedLoss": "$120m",
+      "date": "2026-03-18T14:30:00",
+      "status": "Loss Adjusted",
+      "impact": "Refining margins impacted; business interruption claims rising.",
+      "description": "Emergency shutdown following a regional grid failure causing severe process unit damage."
+    },
+    {
+      "id": "L-103",
+      "facility": "Queensland Solar Park",
+      "type": "Severe Hail Damage",
+      "sector": "Downstream: Renewables",
+      "estimatedLoss": "$85m",
+      "date": "2026-03-15T09:15:00",
+      "status": "Ongoing Assessment",
+      "impact": "Sub-limits imposed on hail coverage globally.",
+      "description": "Catastrophic hail impacts destroyed approximately 40% of the active panel array."
+    },
+    {
+      "id": "L-104",
+      "facility": "Rotterdam Chemical Depot",
+      "type": "Storage Tank Explosion",
+      "sector": "Downstream: Oil & Gas",
+      "estimatedLoss": "$300m",
+      "date": "2026-02-28T22:45:00",
+      "status": "Settled",
+      "impact": "Tighter scrutiny on vapor recovery systems.",
+      "description": "Large explosion at fuel storage facility, prompting widespread environmental cleanup."
+    },
+    {
+      "id": "L-105",
+      "facility": "Hornsea Array Delta",
+      "type": "Subsea Cable Failure",
+      "sector": "Downstream: Renewables",
+      "estimatedLoss": "$50m",
+      "date": "2026-01-14T06:00:00",
+      "status": "Settled",
+      "impact": "Increased deductibles for subsea cabling operations.",
+      "description": "Complete failure of primary export cables caused significant downtime during peak winter generation."
+    }
+  ]
+};

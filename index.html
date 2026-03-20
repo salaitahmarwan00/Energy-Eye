@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Eagle Eye | Energy Market Intelligence</title>
+    <!-- Google Fonts for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Phosphor Icons for elegant minimalist icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="brand">
+                <i class="ph ph-strategy"></i>
+                <div class="brand-text">
+                    <h1>Eagle Eye</h1>
+                    <span>Energy Insurance Market</span>
+                </div>
+            </div>
+
+            <div class="nav-section">
+                <h2 class="nav-title">Overview</h2>
+                <ul class="nav-list">
+                    <li class="nav-item active" data-target="dashboard">
+                        <i class="ph ph-squares-four"></i>
+                        Dashboard
+                    </li>
+                    <li class="nav-item" data-target="losses-directory">
+                        <i class="ph ph-warning-octagon"></i>
+                        Loss Registry
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-section">
+                <h2 class="nav-title">Downstream Energy</h2>
+                <ul class="nav-list">
+                    <li class="nav-item" data-target="downstream-oil-gas">
+                        <i class="ph ph-drop"></i>
+                        Oil & Gas
+                    </li>
+                    <li class="nav-item" data-target="downstream-power">
+                        <i class="ph ph-lightning"></i>
+                        Conventional Power
+                    </li>
+                    <li class="nav-item" data-target="downstream-renewables">
+                        <i class="ph ph-wind"></i>
+                        Renewable Energy
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-section">
+                <h2 class="nav-title">Upstream Energy</h2>
+                <ul class="nav-list">
+                    <li class="nav-item" data-target="upstream-offshore">
+                        <i class="ph ph-waves"></i>
+                        Offshore & Extraction
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="last-updated">
+                    <i class="ph ph-clock-counter-clockwise"></i>
+                    Last Updated: <span id="update-date-sidebar">--</span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="top-header">
+                <div>
+                    <h1 id="page-title" class="page-title">Global Energy Insurance Market Brief</h1>
+                    <p id="page-subtitle" class="page-subtitle">Daily Intelligence & Underwriting Impact Summary</p>
+                </div>
+                <button class="btn-refresh" id="btn-refresh">
+                    <i class="ph ph-arrows-clockwise"></i>
+                    Fetch Latest News
+                </button>
+            </header>
+
+            <!-- Dynamic Content Container -->
+            <div id="content-area" class="content-area fade-in">
+                <!-- Content will be injected by JavaScript -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Data Logic -> bypasses CORS for local static run -->
+    <script src="data/market-data.js"></script>
+
+    <!-- Main JavaScript Application -->
+    <script src="js/app.js"></script>
+</body>
+</html>
