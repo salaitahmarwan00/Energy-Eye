@@ -35,7 +35,10 @@ jobs:
         run: |
           git config --global user.name "AI Underwriting Analyst"
           git config --global user.email "bot@insurance-eagle-eye.local"
-          git add data/market-data.js
-          
-          # Only commit if git detects changes to the file
-          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-Update: Latest AI Intelligence Gathered" && git push)
+          if [ -f data/market-data.js ]; then
+            git add data/market-data.js
+            # Only commit if git detects changes to the file
+            git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-Update: Latest AI Intelligence Gathered" && git push)
+          else
+            echo "data/market-data.js not found, nothing to commit."
+          fi
